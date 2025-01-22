@@ -1,13 +1,16 @@
 "use client";
+// app/admin/page.tsx
+"use client";
+import { supabase } from "@/lib/supabaseClient";
 import { HiArrowSmallUp, HiArrowLongDown } from "react-icons/hi2";
 import { LineChart } from "@mui/x-charts";
 import { createClient } from '@supabase/supabase-js';
 import { useEffect, useState } from 'react';
 
-const SUPABASE_URL = "https://riapbavbospmdsbiwnew.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJpYXBiYXZib3NwbWRzYml3bmV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcxMjQwNzQsImV4cCI6MjA1MjcwMDA3NH0.fqq4DOPwFkSdIGgI-jv_DQLT4MYWe4M6IfwAQSfWpOg";
+// const SUPABASE_URL = "https://riapbavbospmdsbiwnew.supabase.co";
+// const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJpYXBiYXZib3NwbWRzYml3bmV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcxMjQwNzQsImV4cCI6MjA1MjcwMDA3NH0.fqq4DOPwFkSdIGgI-jv_DQLT4MYWe4M6IfwAQSfWpOg";
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+// export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const Page = () => {
   const [totalTweets, setTotalTweets] = useState(0);
